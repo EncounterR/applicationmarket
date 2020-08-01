@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.WebUserMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.WebUser">
+        <id column="user_id" jdbcType="INTEGER" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
+        <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    </resultMap>
+    <sql id="Base_Column_List">
+		user_id, user_name, user_password, role_id
+	</sql>
+    <!-- getAll -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from web_user
+    </select>
+    <!--getWebUserByUserNameAndUserPassword-->
+    <select id="getWebUserByUserNameAndUserPassword" parameterType="java.lang.String" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from web_user
+        where user_name = #{userName} and user_password=#{userPassword}
+    </select>
+    <!--getWebUserByUserName-->
+    <select id="getWebUserByUserName" parameterType="java.lang.String" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from web_user
+        where user_name = #{userName}
+    </select>
+    <!--getWebUserByUserId-->
+    <select id="getWebUserByUserId" parameterType="java.lang.Integer" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from web_user
+        where user_id = #{userId}
+    </select>
+    <!-- addApkDownloadLog -->
+    <insert id="addWebUser" parameterType="com.oranth.applicationmarket.entity.WebUser">
+		insert into web_user (user_name, user_password, role_id)
+		values (#{userName}, #{userPassword},#{roleId})
+	</insert>
+    <!-- delWebUser -->
+    <delete id="delWebUser" parameterType="java.lang.Integer">
+		delete from web_user
+		where user_id = #{userId}
+	</delete>
+    <!-- editWebUser -->
+    <update id="editWebUser" parameterType="com.oranth.applicationmarket.entity.WebUser">
+		update web_user
+		set
+		user_name = #{userName},
+		user_password = #{userPassword},
+		role_id = #{roleId}
+		where user_id = #{userId}
+	</update>
+</mapper>

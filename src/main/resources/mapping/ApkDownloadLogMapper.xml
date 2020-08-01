@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.ApkDownloadLogMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.ApkDownloadLog">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="apkId" jdbcType="INTEGER" property="apk_id" />
+        <result column="ip" jdbcType="VARCHAR" property="ip" />
+        <result column="admincode" jdbcType="VARCHAR" property="admincode" />
+        <result column="device" jdbcType="VARCHAR" property="device" />
+        <result column="model" jdbcType="VARCHAR" property="model" />
+        <result column="downloadTime" jdbcType="TIMESTAMP" property="download_time" />
+    </resultMap>
+    <sql id="Base_Column_List">
+		id, apk_id, ip, admincode,device,model,download_time
+	</sql>
+    <!-- getAll -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from apk_download_log
+    </select>
+    <!-- getApkDownloadLogById -->
+    <select id="getAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from apk_download_log
+        where id=#{id}
+    </select>
+    <!-- addApkDownloadLog -->
+    <insert id="addApkDownloadLog" parameterType="com.oranth.applicationmarket.entity.ApkDownloadLog">
+		insert into apk_download_log (apk_id,ip,admincode,device,model,download_time )
+		values (#{apkId}, #{ip},#{admincode},#{device},#{model},#{downloadTime})
+	</insert>
+    <!-- delApkDownloadLog -->
+    <delete id="delApkDownloadLog" parameterType="java.lang.Integer">
+		delete from apk_download_log
+		where id = #{id}
+	</delete>
+    <!-- editApkDownloadLog -->
+    <update id="editApkDownloadLog" parameterType="com.oranth.applicationmarket.entity.ApkDownloadLog">
+		update apk_download_log
+		set
+		apk_id = #{apkId},
+		ip = #{ip},
+		admincode = #{admincode},
+		device = #{device},
+		model = #{model},
+		download_time = #{downloadTime}
+		where id = #{id}
+	</update>
+</mapper>

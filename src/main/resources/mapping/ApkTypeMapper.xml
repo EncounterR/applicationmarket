@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.ApkTypeMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.ApkType">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="type_name" jdbcType="VARCHAR" property="typeName" />
+        <result column="pid" jdbcType="INTEGER" property="pid" />
+    </resultMap>
+    <sql id="Base_Column_List">
+		id, type_name, pid
+	</sql>
+    <!-- getAll -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from apk_type
+    </select>
+    <!-- getApkTypeById -->
+    <select id="getApkTypeById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from apk_type
+        where id=#{id}
+    </select>
+    <!-- addApkType -->
+    <insert id="addApkType" parameterType="com.oranth.applicationmarket.entity.ApkType">
+		insert into apk_type (type_name, pid)
+		values (#{typeName}, #{pid})
+	</insert>
+    <!-- delApkType -->
+    <delete id="delApkType" parameterType="java.lang.Integer">
+		delete from apk_type
+		where id = #{id}
+	</delete>
+    <!-- editApkType -->
+    <update id="editApkType" parameterType="com.oranth.applicationmarket.entity.ApkType">
+		update apk_type
+		set
+		type_name = #{typeName},
+		pid = #{pid}
+		where id = #{id}
+	</update>
+</mapper>

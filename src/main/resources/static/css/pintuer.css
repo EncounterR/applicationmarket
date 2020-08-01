@@ -1,0 +1,132 @@
+.panel-head {
+    background-color: #fcfcfc;
+    padding: 10px 15px;
+    border-radius: 4px 4px 0 0;
+    border-bottom: solid 1px #ddd;
+}
+.panel {
+    border: solid 1px #ddd;
+    border-radius: 4px;
+}
+.padding {
+    padding: 10px;
+}
+
+.border-bottom {
+    border-bottom: solid 1px #ddd;
+}
+.input {
+    font-size: 14px;
+    padding: 10px;
+    border: solid 1px #ddd;
+    width: 240px;
+    line-height: 20px;
+    display: block;
+    border-radius: 3px;
+    -webkit-appearance: none;
+}
+.button {
+    border: solid 1px #ddd;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px 9px;
+    margin: 0;
+    display: inline-block;
+    line-height: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) 0s;
+    text-decoration: none;
+    cursor: pointer;
+}
+.padd3_5 {
+    padding: 3px 5px;
+    margin-right:2px; 
+}
+.border-green{
+    color: #2c7;
+    border-color: #2c7;  
+}
+.border-green:HOVER{
+	background-color: #55dd88;
+	color: #FFFFFF;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.cten{
+	border-top:1px solid #ddd;
+	text-align: center;
+}
+.button-group, .button-group-y {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+.border-red:HOVER{
+	background-color:#FF0000;
+	color: #FFFFFF;
+}
+.button-group .button, .button-group .button-group .button {
+    margin-left: -1px;
+}
+.button-group .button, .button-group .button-group {
+    float: left;
+    position: relative;
+    font-weight: normal;
+}
+.border-red{
+	color: #e33;
+	border-color: #e33;
+}
+.border-blue{
+	color: #0ae;
+	border-color: #0ae;
+}
+.border-blue:HOVER{
+	background-color:#0ae;
+	color: #FFFFFF;
+}
+
+.border-oranth{
+	color: #f38a0a;
+	border-color: #f38a0a;
+}
+.border-oranth:HOVER{
+	background-color:#f38a0a;
+	color: #FFFFFF;
+}
+.table th {
+    border-bottom: 1px solid #ddd;
+    vertical-align: bottom;
+    padding: 8px;
+    text-align: center;
+}
+.paging{
+	border-collapse: separate;
+}
+.paging .mar{
+	margin: 0px;
+}
+.paging .usepaging{
+	padding: 2px 9px;
+}
+.paging .usepag0{
+	padding:0px 0px;
+	margin: -1px 10% -1px 0px;
+}
+#pagination li{
+	padding: 2px 9px;
+}
+.table .pagingtr{
+	padding: 0px 0px;
+}
+.border-gray{
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.mar-rig2{
+	margin-right: 3px;
+}

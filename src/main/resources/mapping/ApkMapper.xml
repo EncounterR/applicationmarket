@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.ApkMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.Apk">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="label" jdbcType="VARCHAR" property="label"/>
+        <result column="alias" jdbcType="VARCHAR" property="alias"/>
+        <result column="pkg_name" jdbcType="VARCHAR" property="pkgName"/>
+        <result column="cls_name" jdbcType="VARCHAR" property="clsName"/>
+        <result column="file_size" jdbcType="INTEGER" property="fileSize"/>
+        <result column="version_code" jdbcType="INTEGER" property="versionCode"/>
+        <result column="version_name" jdbcType="VARCHAR" property="versionName"/>
+        <result column="min_sdk_version" jdbcType="VARCHAR" property="minSdkVersion"/>
+        <result column="target_sdk_version" jdbcType="VARCHAR" property="targetSdkVersion"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="file_url" jdbcType="VARCHAR" property="fileUrl"/>
+        <result column="file_md5" jdbcType="VARCHAR" property="fileMd5"/>
+        <result column="des" jdbcType="VARCHAR" property="des"/>
+        <result column="type_id" jdbcType="INTEGER" property="typeId"/>
+        <result column="creator_id" jdbcType="INTEGER" property="creatorId"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="edit_time" jdbcType="TIMESTAMP" property="editTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="news" jdbcType="VARCHAR" property="news"/>
+        <result column="is_forbidden" jdbcType="INTEGER" property="isForbidden"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+		id, label, alias, pkg_name,cls_name,file_size,version_code,version_name,min_sdk_version,target_sdk_version,
+		icon,file_url,file_md5,des,type_id,creator_id,create_time,edit_time,update_time,news,is_forbidden
+	</sql>
+    <!-- getAll -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from apk
+    </select>
+    <!--getApkById-->
+    <select id="getApkById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from apk
+        where id=#{id}
+    </select>
+    <!--getApkByTypeId-->
+    <select id="getApkByTypeId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from apk
+        where type_id=#{typeId}
+    </select>
+    <!-- addApk -->
+    <insert id="addApk" parameterType="com.oranth.applicationmarket.entity.Apk" useGeneratedKeys="true" keyProperty="id">
+		insert into apk (label, alias, pkg_name,cls_name,file_size,version_code,version_name,min_sdk_version,target_sdk_version,icon,file_url,file_md5,des,type_id,creator_id,create_time,edit_time,update_time,news,is_forbidden)
+		values (#{label}, #{alias},#{pkgName},#{clsName},#{fileSize},#{versionCode},#{versionName},#{minSdkVersion},#{targetSdkVersion},#{icon},#{fileUrl},#{fileMd5},#{des},#{typeId},#{creatorId},#{createTime},#{editTime},#{updateTime},#{news},#{isForbidden})
+	</insert>
+    <!-- delApk -->
+    <delete id="delApk" parameterType="java.lang.Integer">
+		delete from apk
+		where id = #{id}
+	</delete>
+    <!-- editApk -->
+    <update id="editApk" parameterType="com.oranth.applicationmarket.entity.Apk">
+		update apk
+		set
+		label = #{label},
+		alias = #{alias},
+		pkg_name = #{pkgName},
+		cls_name = #{clsName},
+		file_size = #{fileSize},
+		version_code = #{versionCode},
+		version_name = #{versionName},
+		min_sdk_version = #{minSdkVersion},
+		target_sdk_version = #{targetSdkVersion},
+		icon = #{icon},
+		file_url = #{fileUrl},
+		file_md5 = #{fileMd5},
+		des = #{des},
+		type_id = #{typeId},
+		creator_id = #{creatorId},
+		create_time = #{createTime},
+		edit_time = #{editTime},
+		update_time = #{updateTime},
+		news = #{news},
+		is_forbidden = #{isForbidden}
+		where id = #{id}
+	</update>
+</mapper>

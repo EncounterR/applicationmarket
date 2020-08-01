@@ -1,0 +1,71 @@
+body{
+	min-width: 0px;
+}
+.body-content {
+    margin-top: 10px;
+    padding-bottom: 20px;
+	}
+.border-gray {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.ulblock{
+	
+	width: 1000px;
+	border-right: 0px;
+	margin: 0px;
+}
+.ulblock li {
+	margin-left: 0px;
+	border-left: 1px solid #d2d2d2;
+	border-right: 1px solid #d2d2d2;
+    float: left;
+	padding: 5px 9px;
+	cursor: default;
+}
+.ulblock li:hover {
+	border-left: 1px solid #e33;
+	border-right: 1px solid #e33;
+}
+.table-head{
+	display: inline-block;
+	padding: 0px;
+	border-bottom: 1px solid #d2d2d2;
+}
+.param-head-c {
+    border-bottom: 1px solid #d2d2d2;
+    margin-left: -20px;
+    padding: 5px 20px;
+	height: 20px;
+}
+.apkrcon{
+	width: 650px;
+}
+.apkrcon div{
+	width: 200px;
+	height: 225px;
+	display: inline-block;
+	margin: 5px;
+	border: 2px solid #d2d2d2;
+	text-align: center;
+}
+.recmm_info{
+	background-color: #FFFFFF;
+	position: absolute;
+	display: none;
+	border: 1px solid #d2d2d2;
+	border-radius: 3px;
+}
+.recmm_info td{
+	text-align: left;
+}
+.licolor{
+	background-color:#FF0000;
+		color: #FFFFFF;
+}
+#other_connect{
+	width: 900px;
+}
+#tools_connect{
+	width: 900px;
+}

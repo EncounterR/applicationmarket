@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>apk修改</title>
+    <link rel="stylesheet" type="text/css" href="/oranth/common/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/bootstrap/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/personal.css" media="all">
+</head>
+<body>
+<section class="layui-larry-box">
+    <div class="larry-personal">
+        <header class="larry-personal-tit">
+            <span>apk信息</span>
+        </header><!-- /header -->
+        <div class="larry-personal-body clearfix">
+            <div class="layui-form-item">
+                <label class="layui-form-label">编号</label>
+                <div class="layui-input-block">
+                    <input type="text" id="id" name="id"  class="layui-input layui-disabled" th:value="${apk.id}" readonly>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" id="label" name="label"  class="layui-input" th:value="${apk.label}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">包名</label>
+                <div class="layui-input-block">
+                    <input type="text" id="pkgName" name="pkgName"  class="layui-input layui-disabled" th:value="${apk.pkgName}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">类名</label>
+                <div class="layui-input-block">
+                    <input type="text" id="clsName" name="clsName"  class="layui-input layui-disabled" th:value="${apk.clsName}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">别名</label>
+                <div class="layui-input-block">
+                    <input type="text" id="alias" name="alias"  class="layui-input" th:value="${apk.alias}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">apk大小</label>
+                <div class="layui-input-block">
+                    <input type="text" id="fileSize" name="fileSize"  class="layui-input layui-disabled" th:value="${apk.fileSize}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">versionCode</label>
+                <div class="layui-input-block">
+                    <input type="text" id="versionCode" name="versionCode"  class="layui-input layui-disabled" th:value="${apk.versionCode}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">versionName</label>
+                <div class="layui-input-block">
+                    <input type="text" id="versionName" name="versionName"  class="layui-input layui-disabled" th:value="${apk.versionName}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">最小SDK</label>
+                <div class="layui-input-block">
+                    <input type="text" id="minSdkVersion" name="minSdkVersion"  class="layui-input layui-disabled" th:value="${apk.minSdkVersion}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">当前SDK</label>
+                <div class="layui-input-block">
+                    <input type="text" id="targetSdkVersion" name="targetSdkVersion"  class="layui-input layui-disabled" th:value="${apk.targetSdkVersion}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">apk图标</label>
+                <input id="icon" type="text" th:value="${apk.icon}" hidden>
+                <div class="layui-input-block">
+                    <img id="apkIcon" src="" width="100px" height="100px">
+                    <a class="btn btn-default" v-on:click="logoImgButton">上传</a>
+                    <input type="file" style="display: none" class="file-btn"  @change="logoimguoload" accept="image/*">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">apk应用截图</label>
+                <div class="layui-input-block" id="wuhai"><!--图片的修改删除只要在按钮上直接操作，而新增图片时用另外的多图上传，然后在js中进行添加img样式，最后，后台获取全部img的src，完成图片的修改-->
+                    <div th:each="apkScreenshot,apkScreenhotStart : ${apkScreenshots}" th:id="apkScreenshot+(${apkScreenshot.id})">
+                    <img th:id="apkScreenshot_+(${apkScreenshot.id})" th:src="@{(${apkScreenshot.imgUrl})}" width="150px" height="100px" style="margin-bottom: 10px">
+                        <button type="button" class="btn btn-default"  th:onclick= "|javascript:apkScreenshotDel('${apkScreenshot.id}')|" >删除</button>
+                    </div>
+                    <div id="wuhaiqiang"></div>
+                    <div>
+                        <a class="btn btn-default" v-on:click="logoImgButton">新增</a>
+                        <input type="file" style="display: none" class="file-btn" id="logoimguoload" @change="logoimguoload" accept="image/*">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">apk下载路径</label>
+                <div class="layui-input-block">
+                    <input type="text" id="fileUrl" name="fileUrl"  class="layui-input layui-disabled" th:value="${apk.fileUrl}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">MD5</label>
+                <div class="layui-input-block">
+                    <input type="text" id="fileMd5" name="fileMd5"  class="layui-input layui-disabled" th:value="${apk.fileMd5}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">apk简介</label>
+                <div class="layui-input-block">
+                    <input type="text" id="des" name="des"  class="layui-input" th:value="${apk.des}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">分类</label>
+                <input type="text" id="type" th:value="${apk.typeId}" hidden>
+                <div class="layui-input-block">
+                    <select id="typeId" class="form-control" style="width: 150px">
+                        <option th:each="apkType,apkTypesStart : ${apkTypes}" th:value="${apkType.id}" th:text="${apkType.typeName}"></option>
+                    </select>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">创建人id</label>
+                <div class="layui-input-block">
+                    <input type="text" id="creatorId" name="creatorId"  class="layui-input layui-disabled" th:value="${apk.creatorId}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">创建时间</label>
+                <div class="layui-input-block">
+                    <input type="text" id="createTime" name="createTime"  class="layui-input layui-disabled" th:value="${createTime}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">修改时间</label>
+                <div class="layui-input-block">
+                    <input type="text" id="editTime" name="editTime"  class="layui-input layui-disabled" th:value="${editTime}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更新时间</label>
+                <div class="layui-input-block">
+                    <input type="text" id="updateTime" name="updateTime"  class="layui-input layui-disabled" th:value="${updateTime}" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">更新提示</label>
+                <div class="layui-input-block">
+                    <input type="text" id="news" name="news"  class="layui-input" th:value="${apk.news}">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">当前状态</label>
+                <div class="layui-input-block" th:switch="${apk.isForbidden}">
+                    <select id="apk_isForbidden" class="form-control" style="width: 150px" th:case="1">
+                        <option value="1" selected>上架</option>
+                        <option value="0">下架</option>
+                    </select>
+                    <select id="apk_isForbidden" class="form-control" style="width: 150px" th:case="0">
+                        <option value="1">上架</option>
+                        <option value="0" selected>下架</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="button" id="doEdit" value="提交" class="layui-btn">
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+<script>
+    document.getElementById("apkIcon").src = document.getElementById("icon").value;
+    var type=document.getElementById("type").value;
+    var select=document.getElementById("typeId");
+    for(var i=0;i<select.options.length;i++){
+        if(select.options[i].value == type){
+            select.options[i].selected = true;
+            break;
+        }
+    }
+</script>
+<script type="application/javascript" src="/oranth/js/jquery-2.1.0.js"></script>
+<script type="application/javascript" src="/oranth/common/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/oranth/common/layui/layui.js"></script>
+<script type="text/javascript" src="/oranth/js/vue.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="/oranth/js/axios.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="/oranth/js/apk-edit-vue.js"  charset="utf-8"></script>
+</body>
+</html>

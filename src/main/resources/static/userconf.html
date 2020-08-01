@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户管理</title>
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <link rel="stylesheet" type="text/css" href="./css/pintuer.css">
+    <link rel="stylesheet" type="text/css" href="./css/apkconfig.css">
+    <link rel="stylesheet" type="text/css" href="./css/apk_list.css">
+	<link rel="stylesheet" type="text/css" href="./css/paging.css">
+</head>
+<body>
+    <div id="set-product" class="body-content border-gray width-1800" style="display: block;">
+        <div style="border-bottom: solid 1px #ddd;background-color: #fcfcfc;">
+            <div class="panel-head gongg" style="display: inline-table; border-bottom: solid 0px #ddd;">
+                <strong class="icon-reorder"><i class="fa fa-th-list mar-rig2"></i>用户管理 </strong>
+
+            </div>
+            <!--<a class="button border-red padd8_15" id="back" style="margin-left: 20%;">
+                <span class="fa fa-mail-reply fa-1x mar-rig2"></span>返回</a>-->
+        </div>
+        <div class="pro-param" id="pro-param">
+            <div class="param-head-c block" >
+					<span>用户名：</span><input class="pro-param-input" type="text" v-model="username">
+					<span style="padding-left: 30px;">密码：</span><input class="pro-param-input" type="text" v-model="userpassword">
+					 <a class="button border-red padd8_15" id="add" style="margin-left: 2px;">
+					                    <span class="fa fa-mail-reply fa-1x mar-rig2"></span>新增</a> 
+            </div>
+            <div class="pro-param" >
+                <div class="table-head ">
+                    <ul class="ulblock">
+                        <li class="width-30"></li>
+                        <li class="width-200">用户名</li>
+                        <li class="width-200">密码</li>
+                    </ul>
+                </div>
+                <div  id="table_connect"><!-- -->
+					
+                </div>
+				 <!-- <div class="paging cten " >
+						   			<div class="wid usepaging usepag0" style="border:0px;">
+										<span data-page="" class="hover prev usepaging">&lt;&lt;上一页</span>
+										<ul id="pagination" class="mar"></ul>
+										<span data-page="" class="hover next usepaging">下一页&gt;&gt;</span>
+									</div>
+					</div> -->
+            </div>
+			
+        </div>
+    </div>
+</body>
+    <script type="text/javascript" src="./js/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="./js/vue.min.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="./js/axios.min.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="./js/user-vue.js"></script>
+</html>

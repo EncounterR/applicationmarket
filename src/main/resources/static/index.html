@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+    <!-- load css -->
+    <link rel="stylesheet" type="text/css" href="common/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/login.css" media="all">
+</head>
+<body>
+<div class="layui-canvs"></div>
+<div class="layui-layout layui-layout-login">
+    <h1>
+        <strong>管理系统</strong> <em>oranth system</em>
+    </h1>
+    <form id="loginform" name="loginform">
+        <div class="layui-user-icon larry-login">
+            <input type="text" id="user" name="user" placeholder="账号" class="login_txtbx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}"/>
+        </div>
+        <div class="layui-pwd-icon larry-login">
+            <input type="password" id="psw" name="psw" placeholder="密码" class="login_txtbx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
+        </div>
+        <div class="layui-submit larry-login">
+            <input type="button" value="立即登陆" class="wuhai" id="login"/>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="common/layui/lay/dest/layui.all.js"></script>
+<script type="text/javascript" src="common/js/login.js"></script>
+<script type="text/javascript" src="common/jsplug/jparticle.jquery.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $(".layui-canvs").jParticle({
+            background : "#141414",
+            color : "#E6E6E6"
+        });
+        $(".submit_btn").click(function() {
+            $("#loginform").submit();
+        });
+    });
+    $(document).ready(function(){
+        $("input").focus(function(){
+            $("#error").hide();
+        });
+    });
+    $("#login").click(function(){
+        var user = $("#user").val();
+        var pwd = $("#psw").val();
+        $.ajax({
+            data: "user="+user+"&pwd="+pwd,
+            type: "post",
+            dataType: "text",
+            url: "web-user/login",
+            async: true,
+            success: function(data){
+                console.log(data)
+                var datato = data;
+                if(datato == "login"){
+                    window.location.href = "admin.html?user="+encodeURI(encodeURI(user));
+                }else{
+                    alert(datato);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>推荐页面</title>
+    <link rel="stylesheet" type="text/css" href="./common/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./common/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./common/bootstrap/css/bootstrap.min.css" media="all">
+</head>
+<body>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active" id="recommend"><a>recommend</a></li>
+    <li role="presentation" id="video"><a>video</a></li>
+    <li role="presentation" id="other"><a>other</a></li>
+    <li role="presentation" id="game"><a>game</a></li>
+    <li role="presentation" id="tools"><a>tools</a></li>
+</ul>
+<section class="layui-larry-box">
+    <div class="larry-personal">
+        <div class="layui-tab">
+            <!-- 操作日志 -->
+            <div class="layui-form news_list">
+                <table class="layui-table" id="table_recommend">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>坑位位置</th>
+                        <th>apkid</th>
+                        <th>apk名称</th>
+                        <th>展示图</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table_connect_recommend" class="news_content" >
+                    </tbody>
+                </table>
+                <table class="layui-table" id="table_other" hidden>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>坑位位置</th>
+                        <th>apkid</th>
+                        <th>apk名称</th>
+                        <th>展示图</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="news_content" id="table_connect_other">
+                    </tbody>
+                </table>
+                <table class="layui-table" id="table_video" hidden>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>坑位位置</th>
+                        <th>apkid</th>
+                        <th>apk名称</th>
+                        <th>展示图</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="news_content" id="table_connect_video">
+                    </tbody>
+                </table>
+                <table class="layui-table" id="table_game" hidden>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>坑位位置</th>
+                        <th>apkid</th>
+                        <th>apk名称</th>
+                        <th>展示图</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="news_content" id="table_connect_game">
+                    </tbody>
+                </table>
+                <table class="layui-table" id="table_tools" hidden>
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="15%">
+                        <col width="15%">
+                        <col width="25%">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>坑位位置</th>
+                        <th>apkid</th>
+                        <th>apk名称</th>
+                        <th>展示图</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody class="news_content" id="table_connect_tools">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" id="pro-param">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">修改推荐信息</h4>
+            </div>
+            <div class="modal-body" id="modal-body-recommend">
+                <table class="layui-table">
+                    <tr>
+                        <input id="id" value="" hidden>
+                        <input id="category" value="" hidden>
+                        <input id="sortOrder" value="" hidden>
+                        <td>apk Id</td>
+                        <td><input id="apkId" name="apkId" value="null"></td>
+                    </tr>
+                    <tr>
+                        <td>展示图片</td>
+                        <td>
+                            <img id="apkImg" src="" width="100px" height="100px">
+                            <a class="btn btn-default" v-on:click="logoImgButton">上传</a>
+                            <input type="file" style="display: none" class="file-btn" id="logoimguoload" @change="logoimguoload" accept="image/*">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <a class="btn btn-default" v-on:click="doCommit">上传</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="./js/jquery-2.1.0.js"></script>
+<!-- Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript" src="common/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="./js/recommend-vue.js"></script>
+
+<script>
+    $("#recommend").click(function () {
+        $("#recommend").addClass("active");
+        $("#other").removeClass("active");
+        $("#video").removeClass("active");
+        $("#game").removeClass("active");
+        $("#tools").removeClass("active");
+        $("#table_recommend").show();
+        $("#table_video").hide();
+        $("#table_other").hide();
+        $("#table_game").hide();
+        $("#table_tools").hide();
+    })
+    $("#video").click(function () {
+        $("#recommend").removeClass("active");
+        $("#other").removeClass("active");
+        $("#video").addClass("active");
+        $("#table_recommend").hide();
+        $("#table_video").show();
+        $("#table_other").hide();
+    })
+    $("#other").click(function () {
+        $("#recommend").removeClass("active");
+        $("#other").addClass("active");
+        $("#video").removeClass("active");
+        $("#game").removeClass("active");
+        $("#tools").removeClass("active");
+        $("#table_recommend").hide();
+        $("#table_video").hide();
+        $("#table_other").show();
+        $("#table_game").hide();
+        $("#table_tools").hide();
+    })
+    $("#game").click(function () {
+        $("#game").addClass("active");
+        $("#other").removeClass("active");
+        $("#video").removeClass("active");
+        $("#recommend").removeClass("active");
+        $("#tools").removeClass("active");
+        $("#table_game").show();
+        $("#table_video").hide();
+        $("#table_recommend").hide();
+        $("#table_other").hide();
+        $("#table_tools").hide();
+    })
+    $("#tools").click(function () {
+        $("#recommend").removeClass("active");
+        $("#game").removeClass("active");
+        $("#video").removeClass("active");
+        $("#other").removeClass("active");
+        $("#tools").addClass("active");
+        $("#table_recommend").hide();
+        $("#table_other").hide();
+        $("#table_game").hide();
+        $("#table_video").hide();
+        $("#table_tools").show();
+    })
+</script>
+</body>
+</html>

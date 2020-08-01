@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.ApkScreenshotMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.ApkScreenshot">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="apk_id" jdbcType="INTEGER" property="apkId" />
+        <result column="img_url" jdbcType="VARCHAR" property="imgUrl" />
+        <result column="sequence" jdbcType="INTEGER" property="sequence" />
+    </resultMap>
+    <sql id="Base_Column_List">
+		id, apk_id, img_url, sequence
+	</sql>
+    <!-- getApkScreenshotByApkid -->
+    <select id="getApkScreenshotByApkid" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from apk_screenshot
+        where apk_id=#{apkId}
+    </select>
+    <!-- addApkScreenshot -->
+    <insert id="addApkScreenshot" parameterType="com.oranth.applicationmarket.entity.ApkScreenshot">
+		insert into apk_screenshot (apk_id, img_url, sequence)
+		values (#{apkId}, #{imgUrl},#{sequence})
+	</insert>
+    <!-- delApkScreenshot -->
+    <delete id="delApkScreenshot" parameterType="java.lang.Integer">
+		delete from apk_screenshot
+		where apk_id = #{apkId}
+	</delete>
+    <!-- editApkScreenshot -->
+    <update id="editApkScreenshot" parameterType="com.oranth.applicationmarket.entity.ApkScreenshot">
+		update apk_screenshot
+		set
+		apk_id = #{apkId},
+		img_url = #{imgUrl},
+		sequence = #{sequence}
+		where id = #{id}
+	</update>
+</mapper>

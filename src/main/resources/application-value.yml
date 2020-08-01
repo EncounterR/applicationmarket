@@ -1,0 +1,7 @@
+shiro.session.outTime: 60000
+shiro.realm.outTime: 30000
+
+apk.type.yingsi.pid: 1
+apk.type.youxi.pid: 2
+apk.type.ruanjian.pid: 4
+apk.type.jiaoyu.pid: 3

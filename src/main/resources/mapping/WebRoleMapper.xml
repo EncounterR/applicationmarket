@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oranth.applicationmarket.mapper.WebRoleMapper">
+    <resultMap id="BaseResultMap" type="com.oranth.applicationmarket.entity.WebRole">
+        <id column="role_id" jdbcType="INTEGER" property="role_id" />
+        <result column="role_name" jdbcType="VARCHAR" property="role_name" />
+        <result column="role_desc" jdbcType="VARCHAR" property="role_desc" />
+        <result column="role_flag" jdbcType="INTEGER" property="role_flag" />
+    </resultMap>
+    <sql id="Base_Column_List">
+		role_id, role_name, role_desc, role_flag
+	</sql>
+    <!-- getAll -->
+    <select id="getAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from web_role
+    </select>
+    <!-- getWebRoleByRoleId -->
+    <select id="getWebRoleByRoleId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from web_role
+        where role_id = #{role_id}
+    </select>
+    <!-- addWebRole -->
+    <insert id="addWebRole" parameterType="com.oranth.applicationmarket.entity.WebRole">
+		insert into web_role (role_name, role_desc, role_flag)
+		values (#{role_name}, #{role_desc},#{role_flag})
+	</insert>
+    <!-- delWebRole -->
+    <delete id="delWebRole" parameterType="java.lang.Integer">
+		delete from web_role
+		where role_id = #{role_id}
+	</delete>
+    <!-- editWebRole -->
+    <update id="editWebRole" parameterType="com.oranth.applicationmarket.entity.WebRole">
+		update web_role
+		set
+		role_name = #{role_name},
+		role_desc = #{role_desc},
+		role_flag = #{role_flag}
+		where role_id = #{role_id}
+	</update>
+</mapper>

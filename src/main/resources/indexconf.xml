@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+	<slipe num="">
+		<img>
+			<img-url>img/slide_img/1.jpg</img-url>
+			<a-img-href>http://192.168.199.153:8884/text1/product/Box-a?proid=1</a-img-href>
+			<goodsId>1</goodsId>
+		</img>
+		<img>
+			<img-url>img/slide_img/2.jpg</img-url>
+			<a-img-href>http://192.168.199.153:8884/text1/product/Box-a?proid=1</a-img-href>
+			<goodsId>2</goodsId>
+		</img>
+		<img>
+			<img-url>img/slide_img/3.jpg</img-url>
+			<a-img-href>http://192.168.199.153:8884/text1/product/Box-a?proid=1</a-img-href>
+			<goodsId>3</goodsId>
+		</img>
+		<img>
+			<img-url>img/slide_img/3.jpg</img-url>
+			<a-img-href>http://192.168.199.153:8884/text1/product/Box-a?proid=1</a-img-href>
+			<goodsId>4</goodsId>
+		</img>
+	</slipe>
+	<video>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<vid-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</vid-url>
+		</img>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<vid-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</vid-url>
+		</img>
+	</video>
+	<video-right>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<vid-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</vid-url>
+		</img>
+	</video-right>
+	<introduce-one>
+		<pc-img>img/product/img1.png</pc-img>
+		<pc-img-box>img/product/what-device_old.png</pc-img-box>
+		<phont-img>img/product/img1.png</phont-img>
+		<phont-img-box>img/product/what-device.jpg</phont-img-box>
+		<title>ANDROID IP TV BOX</title>
+		<title-p>Stalker integration&amp;Friendly interface</title-p>
+		<context>
+			<p>We are a reputed Android TV Box design house and factory. By
+				partnering with us you can feel like we are an extension of your own
+				company. Designing and building hardware and Android software has
+				been our daily work from almost five years</p>
+			<p>This android box surpport API</p>
+			<p>- JS Linux API Network (portal) protocol support </p>
+			<p>- Streaming - RTSP, HTTP, HLS, RTMP, MMS, RTP, UDP, IGMP,</p>
+			<p>- Vod - RTSP, HTTP, HLS, RTMP, MMS, RTP, UDP, IGMP </p>
+			<p>- Remote Control - Play,Stop,Fast forward, fast rewind,Forward,
+				backward,Flying squirrels,learning,Etc.</p>
+		</context>
+	</introduce-one>
+	<introduce-two>
+		<pc-img>img/product/img1.png</pc-img>
+		<pc-img-box>img/product/what-device_old.png</pc-img-box>
+		<phont-img>img/product/img1.png</phont-img>
+		<phont-img-box>img/product/what-device.jpg</phont-img-box>
+		<title>LINUX IPTV SOLUTION</title>
+		<context>
+			<p>Do you need the most cost/effective solution for your IPTV
+				business? Oranth's Linux solution is your choice. We can evaluate
+				your needed hardware resources accord to your project. Remove what
+				you do not need, focus on your important functions and get success.
+			</p>
+		</context>
+	</introduce-two>
+	<product-one-left>
+		<img-src>img/product/5.png</img-src>
+		<pro-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</pro-url>
+		<goodsId>4</goodsId>
+	</product-one-left>
+	<product-one-right>
+		<img-src>img/product/6.png</img-src>
+		<pro-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</pro-url>
+		<goodsId>4</goodsId>
+	</product-one-right>
+	<product-two>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<pro-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</pro-url>
+			<goodsId>4</goodsId>
+		</img>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<pro-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</pro-url>
+			<goodsId>4</goodsId>
+		</img>
+		
+	</product-two>
+	<product-two-right>
+		<img>
+			<img-src>img/vedio_img/video1.png</img-src>
+			<pro-url>http://192.168.199.153:8884/text1/product/Box-a?proid=1</pro-url>
+			<goodsId>4</goodsId>
+		</img>
+	</product-two-right>
+</xml-body>

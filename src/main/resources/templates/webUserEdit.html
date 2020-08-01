@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>修改管理员信息</title>
+    <link rel="stylesheet" type="text/css" href="/oranth/common/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/bootstrap/css/bootstrap.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/bootstrap/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/global.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/oranth/common/personal.css" media="all">
+    <script>
+        function doSubmit() {
+            var flag = confirm("是否确认提交?");
+            return flag;
+        }
+    </script>
+</head>
+<body>
+<section class="layui-larry-box">
+    <div class="larry-personal">
+        <header class="larry-personal-tit">
+            <span>用户信息</span>
+        </header><!-- /header -->
+        <div class="larry-personal-body clearfix">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户编号</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="userId" name="userId"  class="layui-input layui-disabled" th:value="${webUser.userId}" readonly="readonly">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="userName" name="userName"  class="layui-input layui-disabled" th:value="${webUser.userName}" readonly="readonly" >
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="userPassword" name="userPassword"  class="layui-input" th:value="${webUser.userPassword}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">角色</label>
+                    <div class="layui-input-block">
+                        <input type="text" id="permissionsId" name="permissionsId"  class="layui-input" th:value="${webUser.permissionsId}">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <input type="button" id="doEdit" value="提交" class="layui-btn">
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script type="application/javascript" src="/oranth/js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="/oranth/common/layui/layui.js"></script>
+<script type="text/javascript" src="/oranth/js/vue.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="/oranth/js/axios.min.js"  charset="utf-8"></script>
+<script type="text/javascript" src="/oranth/js/user-edit-vue.js"></script>
+</body>
+</html>

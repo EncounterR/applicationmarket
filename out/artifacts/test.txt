@@ -1,0 +1,6 @@
+	private final static String APK_ICON_PATH = "D:\\Program Files\\Tomcat 7.0\\webapps\\ApplicationMarket\\icon\\";
+	private final static String APK_SCREENSHOT_PATH = "D:\\Program Files\\Tomcat 7.0\\webapps\\ApplicationMarket\\screenshot\\";
+	private final static String APK_PATH = "D:\\Program Files\\Tomcat 7.0\\webapps\\ApplicationMarket\\apk\\";
+	private final static String APK_ICON_HTTP_URL = "http://192.168.199.192/ApplicationMarket/icon/";
+	private final static String APK_SCREENSHOT_HTTP_URL = "http://192.168.199.192/ApplicationMarket/screenshot/";
+	private final static String APK_HTTP_URL = "http://192.168.199.192/ApplicationMarket/apk/";
