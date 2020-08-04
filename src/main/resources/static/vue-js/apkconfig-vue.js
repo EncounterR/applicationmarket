@@ -217,10 +217,10 @@ var vm_screenshot = new Vue({
 					var screenshot_img_html = "";
 					if (json.length > 0) {
 						$.each(json, function(i, elt) {
-							htmlDate="<table><tr><td><img src='"+elt+"' width='150px' height='100px'></td></tr><tr><td style='padding-left: 50px;'><button>删除</button></td></tr></table>";
-							$(".prodepictimgdiv").append(htmlDate);
-							/*$(".prodepictimgdiv").append("<img src='" + elt + "' index='" +
-								vm_screenshot.screenshot_index + "' style='border: 1px dotted;width: 100px;height: 80px;'>");*/
+							/*htmlDate="<table id='apkshoot"+i+"'><tr><td><img src='"+elt+"' width='150px' height='100px'></td></tr><tr><td style='padding-left: 50px;'><button onclick='delshoot("+i+")'>删除</button></td></tr></table>";
+							$(".prodepictimgdiv").append(htmlDate);*/
+							$(".prodepictimgdiv").append("<img src='" + elt + "' index='" +
+								vm_screenshot.screenshot_index + "' style='border: 1px dotted;width: 100px;height: 80px;'>");
 							++vm_screenshot.screenshot_index;
 							vm_screenshot.uploadFileRate = '100%';
 							console.log(vm_screenshot.screenshot_index);
@@ -236,6 +236,10 @@ var vm_screenshot = new Vue({
 	}
 
 });
+
+function delshoot(id) {
+	$("#apkshoot"+id).remove();
+}
 
 var getwidth = function(content) {
 	var sensor = $('<span style="font-size: 14px;">' + content + '</span>').css({

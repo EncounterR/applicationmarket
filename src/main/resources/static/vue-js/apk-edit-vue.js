@@ -142,7 +142,7 @@ $("#doEdit").click( function () {
                 var data = response.data;
                 if (data) {
                     alert("修改成功！！！");
-                    window.location.href = "../../apkList.html";
+                    window.location.href = "../apkList.html";
                 } else {
                     alert("失败！！！");
                 }

@@ -354,7 +354,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -369,7 +369,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -384,7 +384,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -399,7 +399,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -414,7 +414,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -429,7 +429,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -450,7 +450,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -465,7 +465,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -480,7 +480,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -495,7 +495,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -510,7 +510,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -525,7 +525,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -546,7 +546,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -561,7 +561,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -576,7 +576,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -591,7 +591,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -606,7 +606,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -621,7 +621,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -636,7 +636,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -651,7 +651,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -672,7 +672,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -687,7 +687,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -702,7 +702,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -717,7 +717,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -732,7 +732,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -747,7 +747,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -768,7 +768,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a onclick='appRecommendDel("+elt.id+")' class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -783,7 +783,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -798,7 +798,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -813,7 +813,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -828,7 +828,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -843,7 +843,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }
@@ -858,7 +858,7 @@ var apksum = function () {
                                 dataHtml+="<tr><td>"+elt.sortOrder+"</td>";
                                 dataHtml+="<td>null</td>";
                                 dataHtml+="<td>null</td>";
-                                dataHtml+="<td><img height='100px' width='100px' src='img/ic_kodi.png'></td>";
+                                dataHtml+="<td><img height='100px' width='100px' src='../img/ic_kodi.png'></td>";
                                 dataHtml+="<td><a onclick='appRecommendDet("+elt.id+")' class='btn btn-default' data-toggle='modal' data-target='#myModal'>修改</a><a class='btn btn-default' href='#'>删除</a></td></tr>";
                             }
                         }

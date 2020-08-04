@@ -59,19 +59,22 @@ public class WebUserController {
     }
 
     @ApiIgnore
-    @PostMapping("/update")
-    public String update(
-            @ApiParam(name = "userId",value = "账号id")@RequestParam(value="userId") Integer userId,
-            @ApiParam(name = "userName",value = "账号")@RequestParam(value="userName") String userName,
-            @ApiParam(name = "userPassword",value = "密码")@RequestParam(value="userPassword") String userPassword,
-            @ApiParam(name = "permissionsId",value = "角色")@RequestParam(value="permissionsId") Integer permissionsId){
-        WebUser webUser = new WebUser();
-        webUser.setUserId(userId);
-        webUser.setUserName(userName);
-        webUser.setUserPassword(userPassword);
-        webUser.setRoleId(permissionsId);
-        boolean b = webUserService.editWebUser(webUser);
-        return ""+b;
+    @RequestMapping(value = "/update",method = RequestMethod.PUT)
+    public String update(@RequestParam(value = "oldPassword") String oldPassword,@RequestParam(value = "password") String password,HttpSession session){
+        System.out.println("------------------"+oldPassword+"------"+password);
+        boolean flat=false;
+        ActiveUser activeUser=(ActiveUser) session.getAttribute("activeUser");
+        WebUser webUser=webUserService.getWebUserById(activeUser.getUserid());
+        System.out.println("---------"+webUser);
+        if(webUser.getUserPassword().equals(oldPassword)){
+            System.out.println("----------------------"+webUser.getUserPassword()==oldPassword);
+            webUser.setUserPassword(password);
+            boolean b = webUserService.editWebUser(webUser);
+            System.out.println("---------------------"+webUser);
+            System.out.println("---------------------"+b);
+            if(b){flat=true;}
+        }
+        return ""+flat;
     }
 
     @ApiIgnore
@@ -100,7 +103,6 @@ public class WebUserController {
             // 身份
             ActiveUser activeUser = (ActiveUser) subject.getPrincipal();
             session.setAttribute("activeUser", activeUser);
-            System.out.println("-----------"+session.getAttribute("activeUser"));
             return "login";
         } catch (UnknownAccountException ex) {
             String message ="用户名密码错误";
@@ -142,6 +144,16 @@ public class WebUserController {
     }
 
     /**
+     * 根据用户名查询信息
+     * @param username
+     * @return
+     */
+    @GetMapping("/query2/{username}")
+    public String qyeryByUsername(@PathVariable(value = "username") String username){
+        WebUser webUser=webUserService.getWebUserByUsername(username);
+        return JSON.toJSONString(webUser);
+    }
+    /**
      * 用户退出，清空session中的值
      * @return
      */
@@ -151,4 +163,6 @@ public class WebUserController {
         currentUser.logout();
         return "/";
     }
+
+
 }

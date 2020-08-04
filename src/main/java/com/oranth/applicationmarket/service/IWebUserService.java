@@ -24,6 +24,13 @@ public interface IWebUserService {
     public WebUser login(String userName,String userPassword);
 
     /**
+     * 根据用户名查询用户信息
+     * @param username
+     * @return
+     */
+    public WebUser getWebUserByUsername(String username);
+
+    /**
      * 根据id获取管理员信息
      * @param id
      * @return

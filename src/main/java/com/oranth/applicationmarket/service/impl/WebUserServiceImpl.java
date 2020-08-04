@@ -30,6 +30,11 @@ public class WebUserServiceImpl implements IWebUserService {
     }
 
     @Override
+    public WebUser getWebUserByUsername(String username) {
+        return webUserMapper.getWebUserByUserName(username);
+    }
+
+    @Override
     public WebUser getWebUserById(Integer id) {
         return webUserMapper.getWebUserByUserId(id);
     }

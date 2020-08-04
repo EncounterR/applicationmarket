@@ -14,7 +14,7 @@ $("#doEdit").click( function () {
                 var data = response.data;
                 if (data) {
                     alert("修改成功！！！");
-                    window.location.href = "../../webUsers.html";
+                    window.location.href = "../webUsers.html";
                 } else {
                     alert("失败！！！");
                 }
