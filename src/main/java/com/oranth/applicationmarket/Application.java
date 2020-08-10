@@ -10,6 +10,8 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.Properties;
 
@@ -20,7 +22,7 @@ import java.util.Properties;
 @EnableAsync
 @EnableCaching //redis 注解
 @SpringBootApplication
-//@EnableSwagger2
+@EnableSwagger2//Swagger 注解
 @MapperScan("com.oranth.applicationmarket.mapper")
 public class Application{
     public static void main(String[] args) {

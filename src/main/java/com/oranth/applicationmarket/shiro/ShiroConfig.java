@@ -36,6 +36,14 @@ public class ShiroConfig {
 		filterChainDefinitionMap.put("/live2d/**", "anon");
 		filterChainDefinitionMap.put("/echarts/**", "anon");
 		filterChainDefinitionMap.put("/vue-js/**", "anon");
+		//开放swagger
+		filterChainDefinitionMap.put("/swagger-ui.html", "anon");
+		//swagger2要配置成/swagger-resources/**，否则页面显示为空，切记切记
+		filterChainDefinitionMap.put("/swagger-resources/**", "anon");
+		filterChainDefinitionMap.put("/v2/**", "anon");
+		filterChainDefinitionMap.put("/webjars/**", "anon");
+		filterChainDefinitionMap.put("/configuration/security", "anon");
+		filterChainDefinitionMap.put("/configuration/ui", "anon");
 		// 其余接口一律拦截 //
 		// * 主要这行代码必须放在所有权限设置的最后，不然会导致所有 url 都被拦截 
 		filterChainDefinitionMap.put("/**", "authc");

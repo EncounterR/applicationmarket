@@ -326,3 +326,258 @@ Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E:
 17:22:10.071 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
 17:27:35.146 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
 17:30:18.493 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:32:10.880 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:36:04.148 ERROR org.apache.juli.logging.DirectJDKLog 175 log - Servlet.service() for servlet [dispatcherServlet] in context with path [/oranth] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542) ~[?:1.8.0_131]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_131]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl.queryRecommend(ApkServiceImpl.java:98) ~[classes/:?]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$FastClassBySpringCGLIB$$6b91b7ef.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$EnhancerBySpringCGLIB$$609bfd74.queryRecommend(<generated>) ~[classes/:?]
+	at com.oranth.applicationmarket.controller.ApkController.query(ApkController.java:293) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+
+14:14:33.054 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:21:23.579 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:22:16.786 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:26:25.768 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:40:02.843 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:45:31.180 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:52:56.907 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:58:28.138 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:59:20.901 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+15:00:42.037 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+15:03:10.421 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+15:04:47.207 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+15:05:34.542 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+15:09:53.736 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+09:41:27.972 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+09:56:19.315 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:28:50.225 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:32:39.677 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:39:26.140 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:43:09.724 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:46:22.700 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:47:12.177 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+10:58:39.287 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:37:59.280 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:39:02.872 ERROR org.apache.juli.logging.DirectJDKLog 175 log - Servlet.service() for servlet [dispatcherServlet] in context with path [/oranth] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542) ~[?:1.8.0_131]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_131]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl.queryRecommend(ApkServiceImpl.java:98) ~[classes/:?]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$FastClassBySpringCGLIB$$6b91b7ef.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$EnhancerBySpringCGLIB$$2324599a.queryRecommend(<generated>) ~[classes/:?]
+	at com.oranth.applicationmarket.controller.AppRecommendController.select(AppRecommendController.java:86) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+
+11:39:54.888 ERROR org.apache.juli.logging.DirectJDKLog 175 log - Servlet.service() for servlet [dispatcherServlet] in context with path [/oranth] threw exception [Request processing failed; nested exception is java.lang.NumberFormatException: null] with root cause java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542) ~[?:1.8.0_131]
+	at java.lang.Integer.parseInt(Integer.java:615) ~[?:1.8.0_131]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl.queryRecommend(ApkServiceImpl.java:98) ~[classes/:?]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$FastClassBySpringCGLIB$$6b91b7ef.invoke(<generated>) ~[classes/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:685) ~[spring-aop-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at com.oranth.applicationmarket.service.impl.ApkServiceImpl$$EnhancerBySpringCGLIB$$2324599a.queryRecommend(<generated>) ~[classes/:?]
+	at com.oranth.applicationmarket.controller.AppRecommendController.selectAll(AppRecommendController.java:95) ~[classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_131]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_131]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_131]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_131]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387) ~[shiro-core-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125) ~[shiro-web-1.4.1.jar:1.4.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.1.RELEASE.jar:5.2.1.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_131]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_131]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.27.jar:9.0.27]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_131]
+
+10:11:40.740 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:38:07.448 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:44:15.486 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:45:34.819 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:49:11.922 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:49:37.300 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:52:08.276 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:56:25.257 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:57:01.764 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:57:15.776 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:58:50.431 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+11:59:25.429 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:39:44.039 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:43:32.510 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:48:54.110 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:51:23.640 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:53:14.660 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:54:58.214 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+13:55:44.785 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:01:33.088 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:05:56.220 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file
+14:07:31.734 ERROR com.baomidou.mybatisplus.core.MybatisConfiguration 100 addMappedStatement - mapper[com.oranth.applicationmarket.mapper.ApkDownloadLogMapper.getAll] is ignored, because it exists, maybe from xml file

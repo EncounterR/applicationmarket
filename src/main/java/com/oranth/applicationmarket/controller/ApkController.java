@@ -255,7 +255,7 @@ public class ApkController {
 		return resultData +"";
 	}
 
-	@ApiOperation("根据apk类型分页查询所有数据量")
+	@ApiOperation("删除apk")
 	@GetMapping("/del/{id}")
 	@ResponseBody
 	public String del(
@@ -289,6 +289,7 @@ public class ApkController {
 	public String query(
 			@ApiParam(name = "token",value = "token")@RequestParam(value="token",required = false) String token
 	){
+		System.out.println("-----------token"+token);
 		List<ResultData> list = apkService.queryRecommend();
 		logger.debug(JSON.toJSONString(list));
 		return JSON.toJSONString(list);

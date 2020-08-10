@@ -61,17 +61,12 @@ public class WebUserController {
     @ApiIgnore
     @RequestMapping(value = "/update",method = RequestMethod.PUT)
     public String update(@RequestParam(value = "oldPassword") String oldPassword,@RequestParam(value = "password") String password,HttpSession session){
-        System.out.println("------------------"+oldPassword+"------"+password);
         boolean flat=false;
         ActiveUser activeUser=(ActiveUser) session.getAttribute("activeUser");
         WebUser webUser=webUserService.getWebUserById(activeUser.getUserid());
-        System.out.println("---------"+webUser);
         if(webUser.getUserPassword().equals(oldPassword)){
-            System.out.println("----------------------"+webUser.getUserPassword()==oldPassword);
             webUser.setUserPassword(password);
             boolean b = webUserService.editWebUser(webUser);
-            System.out.println("---------------------"+webUser);
-            System.out.println("---------------------"+b);
             if(b){flat=true;}
         }
         return ""+flat;
