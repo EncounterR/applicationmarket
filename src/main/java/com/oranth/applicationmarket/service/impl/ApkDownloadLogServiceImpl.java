@@ -101,18 +101,18 @@ public class ApkDownloadLogServiceImpl extends ServiceImpl<ApkDownloadLogMapper,
             }
         }
         List<ActiveApkDownloadLog> activeApkDownloadLogs=new ArrayList<>();
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("1月",apkDownloadLogList1));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("2月",apkDownloadLogList2));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("3月",apkDownloadLogList3));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("4月",apkDownloadLogList4));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("5月",apkDownloadLogList5));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("6月",apkDownloadLogList6));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("7月",apkDownloadLogList7));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("8月",apkDownloadLogList8));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("9月",apkDownloadLogList9));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("10月",apkDownloadLogList10));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("11月",apkDownloadLogList11));
-        activeApkDownloadLogs.add(new ActiveApkDownloadLog("12月",apkDownloadLogList12));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("1",apkDownloadLogList1));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("2",apkDownloadLogList2));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("3",apkDownloadLogList3));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("4",apkDownloadLogList4));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("5",apkDownloadLogList5));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("6",apkDownloadLogList6));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("7",apkDownloadLogList7));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("8",apkDownloadLogList8));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("9",apkDownloadLogList9));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("10",apkDownloadLogList10));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("11",apkDownloadLogList11));
+        activeApkDownloadLogs.add(new ActiveApkDownloadLog("12",apkDownloadLogList12));
         return activeApkDownloadLogs;
     }
 

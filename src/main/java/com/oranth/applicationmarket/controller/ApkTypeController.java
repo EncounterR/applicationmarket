@@ -26,7 +26,6 @@ import springfox.documentation.annotations.ApiIgnore;
  * @author linsiteng
  * @since 2019-11-13
  */
-@ApiIgnore
 @RestController
 @RequestMapping("/apkType")
 @Api(value = "apk分类",description = "apk分类")
@@ -57,8 +56,9 @@ public class ApkTypeController {
 	 * @param id
 	 * @return
 	 */
+	@ApiOperation(value = "查询指定分类信息",notes = "根据分类id查询指定的分类信息")
 	@GetMapping("/query/{id}")
-	public String getApkTypeById(@PathVariable (value="id")Integer id){
+	public String getApkTypeById(@ApiParam(name = "id",value = "分类id")@PathVariable (value="id")Integer id){
 		ApkType apkType=iApkTypeService.getApkTypeById(id);
 		return JSON.toJSONString(apkType);
 	}
@@ -67,6 +67,7 @@ public class ApkTypeController {
 	 * 获取所有apk分类
 	 * @return
 	 */
+	@ApiOperation(value = "获取全部分类信息")
 	@RequestMapping("/allApkType")
 	public String getAllApkType(){
 		List<ApkType> apkTypeList=iApkTypeService.getAll();
@@ -78,8 +79,9 @@ public class ApkTypeController {
 	 * @param typeName
 	 * @return
 	 */
+	@ApiOperation(value = "添加分类信息")
 	@PostMapping("/save")
-	public String addApkType(@RequestParam(value="typeName") String typeName){
+	public String addApkType(@ApiParam(name = "typeName",value = "分类名称")@RequestParam(value="typeName") String typeName){
 		ApkType apkType=new ApkType(typeName,0);
 		Boolean flat=iApkTypeService.addApkType(apkType);
 		return ""+flat;
@@ -90,8 +92,9 @@ public class ApkTypeController {
 	 * @param id
 	 * @return
 	 */
+	@ApiOperation(value = "删除分类信息",notes = "根据分类id删除分类信息")
 	@PostMapping("/del/{id}")
-	public String delApkType(@PathVariable (value="id") Integer id){
+	public String delApkType(@ApiParam(name = "id",value = "分类id")@PathVariable (value="id") Integer id){
 		Boolean flat=iApkTypeService.delApkType(id);
 		return ""+flat;
 	}
@@ -100,8 +103,9 @@ public class ApkTypeController {
 	 * 修改分类信息
 	 * @return
 	 */
+	@ApiOperation(value = "修改分类信息")
 	@PostMapping("/edit")
-	public String editApkType(@RequestParam(value="id") Integer id,@RequestParam(value="typeName") String typeName,@RequestParam(value="pid") Integer pid){
+	public String editApkType(@ApiParam(name = "id",value = "分类id")@RequestParam(value="id") Integer id,@ApiParam(name = "typeName",value = "分类名称")@RequestParam(value="typeName") String typeName,@ApiParam(name = "pid",value = "分类层级")@RequestParam(value="pid") Integer pid){
 		ApkType apkType=new ApkType(id,typeName,pid);
 		boolean flat=iApkTypeService.editApkType(apkType);
 		return ""+flat;

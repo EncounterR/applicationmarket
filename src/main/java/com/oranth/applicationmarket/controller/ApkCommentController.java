@@ -29,7 +29,6 @@ import java.util.List;
  * @author linsiteng
  * @since 2019-11-13
  */
-@ApiIgnore
 @RestController
 @RequestMapping("/comment")
 @Api(value = "APK评价类",description = "apk评价")

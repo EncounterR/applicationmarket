@@ -8,7 +8,7 @@ axios.get("core/tomain")
                 apktypeArry[i]=elt.apkType.typeName;
                 apkArry[i]=elt.apkList.length;
                 // 基于准备好的dom，初始化echarts实例
-                var myChart = echarts.init(document.getElementById('main'));
+                var myChart = echarts.init(document.getElementById('apktype'));
                 // 指定图表的配置项和数据
                 var option = {
                     title: {
@@ -41,7 +41,7 @@ axios.get("apk-download-log/tomain")
         jsonData=response.data;
         if (jsonData.length > 0){
             $.each(jsonData,function(i,elt){
-                arry1[i]=elt.month;
+                arry1[i]=elt.month+"月";
                 arry2[i]=elt.apkDownloadLogList.length;
                 // 基于准备好的dom，初始化echarts实例
                 var myChart = echarts.init(document.getElementById('downloadLog'));
@@ -82,7 +82,6 @@ axios.get("comment/tomain")
                 arry.push(wu);
             });
         }
-        console.log(arry)
         // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById('apkcomment'));
         // 指定图表的配置项和数据

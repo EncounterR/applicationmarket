@@ -1,133 +1,147 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title></title>
-		<meta charset="utf-8">
-		<meta name="keywords" content="keyword1,keyword2,keyword3">
-		<meta name="description" content="this is my page">
-		<meta name="content-type" content="text/html; charset=UTF-8">
-		<link rel="stylesheet" type="text/css" href="common/layui/css/layui.css" media="all">
-		<link rel="stylesheet" type="text/css" href="./css/admin.css">
-		<link rel="stylesheet" type="text/css" href="./css/pintuer.css">
-		<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="./css/paging.css">
-		<link rel="stylesheet" type="text/css" href="./css/apkconfig.css">
-		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
-	</head>
-	<body>
-		<div id="set-product" class="body-content border-gray" style="display: block;">
-			<div class="pro-param" id="pro-param">
-				<div class="param-head-c">
-					<h4>基本信息</h4>
-				</div>
-				<table class="layui-table">
-					<colgroup>
-						<col width="10%">
-						<col width="90%">
-					</colgroup>
-					<tr>
-						<td>apk名称</td>
-						<td><input type="text" v-model="apk_name" class="layui-input"></td>
-					</tr>
-					<tr>
-						<td>apk别名</td>
-						<td><input type="text" v-model="alias" placeholder="逗号分隔，方便搜索" class="layui-input"></td>
-					</tr>
-					<tr>
-						<td>apk分类</td>
-						<td>
-							<select id="apkType" v-model="apk_type" name="apk_type" class="form-control" style="width: 150px">
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>apk图标</td>
-						<td>
-							<img v-bind:src="icon" width="100px" height="100px">
-							<span style="font-size:10px;display: none;" v-if="uploadIconRate">{{uploadIconRate}}</span>
-							<a class="button border-blue padd3_5" v-on:click="logoImgButton">上传</a>
-							<span><img v-if="icon" v-bind:src="icon" class="iconimg " style="display: none;"></span>
-							<input type="file" style="display: none" class="file-btn" id="logoimguoload" @change="logoimguoload" accept="image/*">
-						</td>
-					</tr>
-					<tr>
-						<td>apk路径
-						</td>
-						<td>
-							<input type="text" v-model="file_url" v-bind:style="{width:file_url_width+'px'}" readonly="readonly" class="pro-param-input ">
-							<span v-if="file_url" @mouseover="apkInfoBlock" @mouseout="apkInfoHide" title="apk信息" class="fa fa-info fa-1x red font-i" v-cloak></span>
-							<span v-if="uploadFileRate" style="font-size:10px;" v-text="uploadFileRate"></span>
-							<a class="button border-blue padd3_5" v-on:click="apkUpload">上传</a>
-							<input type="file" style="display: none" class="file-btn" id="logoapkupload" @change="logoapkupload" >
-							<div v-if="is_hide" id="apkInfo" v-cloak>
-								<p><b>名称: </b>{{apk_name}}</p>
-								<p><b>md5:</b>{{file_md5}}</p>
-								<p><b>包名:</b>{{file_pkg}}</p>
-								<p><b>版本:</b>{{file_version}}</p>
-								<p><b>版本名称:</b>{{file_versionName}}</p>
-								<p><b>size:</b>{{file_size}}</p>
-								<p><b>最小sdk:</b>{{file_minSdk}}</p>
-								<p><b>当前sdk:</b>{{file_targetSdk}}</p>
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>apk简介</td>
-						<td>
-							<textarea type="text" v-model="description" style="padding: 3px;" class="pro-param-input height-100 width-200"></textarea>
-							<span style="font-size:10px;" v-text="description_size"></span><span>/</span><span style="font-size:10px;">50</span>
-						</td>
-					</tr>
-					<tr>
-						<td>apk当前状态</td>
-						<td>
-							<select id="apk_isForbidden" class="form-control">
-								<option value="1" selected>上架</option>
-								<option value="0">下架</option>
-							</select>
-						</td>
-					</tr>
-				</table>
-			</div>
-			<div class="pro-param" id="screenshot">
-				<div class="param-head-c">
-					<h4>apk内容图片</h4>
-				</div>
-				<div class="display-block">
-					<div class="display-block" style="margin-top: 20px;">
-						<a v-on:click="btnaddscreenshot" class="button border-blue padd3_5">添加</a><span style="font-size:10px;" v-if="uploadFileRate" v-text="uploadFileRate"></span>
-					</div>
-					<div class="display-block l-margin-20 prodepictimgdiv" v-html="add_screenshot_html" id="screenshot_img"></div>
-					<input type="file" style="display: none" @change="screenshotupload" class="file-btn" id="screenshotupload" multiple="multiple" accept="image/*">
-					<div class="imgInfo">
-						<table>
-							<tr>
-								<td>路径:</td>
-								<td colspan="5"><input type="text" style="width: 228px;" id="imgsrcinput"></td>
-							</tr>
-							<tr>
-								<td>顺序:</td>
-								<td><input type="text" style="width: 50px;" id="imgorderinput"></td>
-							</tr>
-							<tr>
-								<td><input type="button" value="修改" id="imgInfobtn-mit"></td>
-								<td><input type="button" value="取消" id="imgInfobtn-cancel"></td>
-								<td><input type="button" value="删除" id="imgInfobtn-remove"></td>
-							</tr>
-						</table>
-					</div>
-				</div>
-			</div>
-			<div class="pro-param">
-				<div class="param-head-c"></div>
-				<div class="param-head-c" style="padding-left: 50px;">
-					<a class="button border-blue padd8_15" id="submit" style="margin-right: 15px;">
-						<span class="fa fa-check-square-o fa-1x mar-rig2"></span>提交</a>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script type="text/javascript" src="./js/jquery-2.1.0.js"></script>
-	<script type="text/javascript" src="vue-js/apkconfig-vue.js"></script>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="common/layui/css/layui.css" media="all">
+    <link rel="stylesheet" type="text/css" href="./css/admin.css">
+    <link rel="stylesheet" type="text/css" href="./css/pintuer.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/paging.css">
+    <link rel="stylesheet" type="text/css" href="./css/apkconfig.css">
+    <script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<style>
+    .apkshootDel{
+        width: 100px;
+        height: 80px;
+    }
+</style>
+<div id="set-product" class="body-content border-gray" style="display: block;">
+    <div class="pro-param" id="pro-param">
+        <div class="param-head-c">
+            <h4>基本信息</h4>
+        </div>
+        <table class="layui-table">
+            <colgroup>
+                <col width="10%">
+                <col width="90%">
+            </colgroup>
+            <tr>
+                <td>apk名称</td>
+                <td><input type="text" v-model="apk_name" class="layui-input"></td>
+            </tr>
+            <tr>
+                <td>apk别名</td>
+                <td><input type="text" v-model="alias" placeholder="逗号分隔，方便搜索" class="layui-input"></td>
+            </tr>
+            <tr>
+                <td>apk分类</td>
+                <td>
+                    <select id="apkType" v-model="apk_type" name="apk_type" class="form-control" style="width: 150px">
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>apk图标</td>
+                <td>
+                    <img v-bind:src="icon" width="100px" height="100px">
+                    <span style="font-size:10px;display: none;" v-if="uploadIconRate">{{uploadIconRate}}</span>
+                    <a class="button border-blue padd3_5" v-on:click="logoImgButton">上传</a>
+                    <span><img v-if="icon" v-bind:src="icon" class="iconimg " style="display: none;"></span>
+                    <input type="file" style="display: none" class="file-btn" id="logoimguoload" @change="logoimguoload"
+                           accept="image/*">
+                </td>
+            </tr>
+            <tr>
+                <td>apk路径
+                </td>
+                <td>
+                    <input type="text" v-model="file_url" v-bind:style="{width:file_url_width+'px'}" readonly="readonly"
+                           class="pro-param-input ">
+                    <span v-if="file_url" @mouseover="apkInfoBlock" @mouseout="apkInfoHide" title="apk信息"
+                          class="fa fa-info fa-1x red font-i" v-cloak></span>
+                    <span v-if="uploadFileRate" style="font-size:10px;" v-text="uploadFileRate"></span>
+                    <a class="button border-blue padd3_5" v-on:click="apkUpload">上传</a>
+                    <input type="file" style="display: none" class="file-btn" id="logoapkupload"
+                           @change="logoapkupload">
+                    <div v-if="is_hide" id="apkInfo" v-cloak>
+                        <p><b>名称: </b>{{apk_name}}</p>
+                        <p><b>md5:</b>{{file_md5}}</p>
+                        <p><b>包名:</b>{{file_pkg}}</p>
+                        <p><b>版本:</b>{{file_version}}</p>
+                        <p><b>版本名称:</b>{{file_versionName}}</p>
+                        <p><b>size:</b>{{file_size}}</p>
+                        <p><b>最小sdk:</b>{{file_minSdk}}</p>
+                        <p><b>当前sdk:</b>{{file_targetSdk}}</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>apk简介</td>
+                <td>
+                    <textarea type="text" v-model="description" style="padding: 3px;"
+                              class="pro-param-input height-100 width-200"></textarea>
+                    <span style="font-size:10px;" v-text="description_size"></span><span>/</span><span
+                        style="font-size:10px;">50</span>
+                </td>
+            </tr>
+            <tr>
+                <td>apk当前状态</td>
+                <td>
+                    <select id="apk_isForbidden" class="form-control">
+                        <option value="1" selected>上架</option>
+                        <option value="0">下架</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="pro-param" id="screenshot">
+        <div class="param-head-c">
+            <h4>apk内容图片</h4>
+        </div>
+        <div class="display-block">
+            <div class="display-block" style="margin-top: 20px;">
+                <a v-on:click="btnaddscreenshot" class="button border-blue padd3_5">添加</a>
+                <span style="font-size:10px;" v-if="uploadFileRate" v-text="uploadFileRate"></span>
+            </div>
+            <div class="display-block l-margin-20 prodepictimgdiv" id="screenshot_img"></div>
+            <input type="file" style="display: none" @change="screenshotupload" class="file-btn" id="screenshotupload" multiple="multiple" accept="image/*">
+            <div class="imgInfo">
+                <table>
+                    <tr>
+                        <td>路径:</td>
+                        <td colspan="5"><input type="text" style="width: 228px;" id="imgsrcinput"></td>
+                    </tr>
+                    <tr>
+                        <td>顺序:</td>
+                        <td><input type="text" style="width: 50px;" id="imgorderinput"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="修改" id="imgInfobtn-mit"></td>
+                        <td><input type="button" value="取消" id="imgInfobtn-cancel"></td>
+                        <td><input type="button" value="删除" id="imgInfobtn-remove"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pro-param">
+        <div class="param-head-c"></div>
+        <div class="param-head-c" style="padding-left: 50px;">
+            <a class="button border-blue padd8_15" id="submit" style="margin-right: 15px;">
+                <span class="fa fa-check-square-o fa-1x mar-rig2"></span>提交</a>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="./js/jquery-2.1.0.js"></script>
+<script type="text/javascript" src="common/layui/layui.js"></script>
+<script type="text/javascript" src="vue-js/apkconfig-vue.js"></script>
 </html>

@@ -172,12 +172,12 @@ var vm_apk_basi = new Vue({
 var vm_screenshot = new Vue({
 	el: "#screenshot",
 	data: {
-		add_screenshot_html: "",
 		uploadFileRate: "",
 		screenshot_index: 1
 	},
 	methods: {
 		btnaddscreenshot: function() {
+
 			$("#screenshotupload").click();
 		},
 		screenshotupload: function(el) {
@@ -217,15 +217,11 @@ var vm_screenshot = new Vue({
 					var screenshot_img_html = "";
 					if (json.length > 0) {
 						$.each(json, function(i, elt) {
-							/*htmlDate="<table id='apkshoot"+i+"'><tr><td><img src='"+elt+"' width='150px' height='100px'></td></tr><tr><td style='padding-left: 50px;'><button onclick='delshoot("+i+")'>删除</button></td></tr></table>";
-							$(".prodepictimgdiv").append(htmlDate);*/
-							$(".prodepictimgdiv").append("<img src='" + elt + "' index='" +
-								vm_screenshot.screenshot_index + "' style='border: 1px dotted;width: 100px;height: 80px;'>");
-							++vm_screenshot.screenshot_index;
+							//$(".prodepictimgdiv").append("<img id='wuwu' data-type='wuwu' class='apkshootDel' src='img/ic_kodi.png'>");
+							var imgID=elt.slice(51,63);
+							$(".prodepictimgdiv").append("<img id='"+imgID+"' data-type='"+imgID+"' class='apkshootDel' src='" + elt + "' style='border: 1px dotted;'>");
 							vm_screenshot.uploadFileRate = '100%';
-							console.log(vm_screenshot.screenshot_index);
 						});
-						proimgbtn();
 					}
 				})
 				.catch(function(err) {
@@ -254,7 +250,7 @@ var getwidth = function(content) {
 }
 
 
-var proimgObj;
+/*var proimgObj;
 var proimgbtn = function() {
 	$(".proimgdiv img").unbind('click');
 	$(".proimgdiv img").click(function() {
@@ -316,7 +312,7 @@ $("#imgInfobtn-remove").click(function() {
 	$(".imgInfo").css("display", "none");
 	proimgObj.remove();
 	proimgObj = "";
-});
+});*/
 
 $("#submit").click(function() {
 	var dimgPath = new Array();
@@ -408,3 +404,19 @@ var readyData = function () {
 		})
 };
 $(document).ready(readyData());
+
+
+layui.use('layer', function () {
+	var $ = layui.jquery, layer = layui.layer;
+	$('#screenshot_img').on('click', '.apkshootDel',function () {
+		var type = $(this).data('type');
+		console.log(type)
+		layer.confirm('删除该图片？', {
+			btn: ['确认'] //按钮
+		}, function () {
+			console.log('#'+type);
+			$('#'+type).remove();
+			layer.msg('确认删除', {icon: 1});
+		});
+	});
+})

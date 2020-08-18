@@ -10,6 +10,7 @@ import com.oranth.applicationmarket.service.IApkService;
 import com.oranth.applicationmarket.service.IAppRecommendService;
 import com.oranth.applicationmarket.utils.Util;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -29,7 +30,6 @@ import java.util.Map;
  * @author linsiteng
  * @since 2019-11-13
  */
-//@ApiIgnore
 @RestController
 @RequestMapping("/app-recommend")
 @Api(value = "推荐操作类", description = "推荐操作类")
@@ -104,6 +104,7 @@ public class AppRecommendController {
      *
      * @return
      */
+    @ApiOperation(value = "根据apk分类获取全部apk推荐信息")
     @PostMapping("/query2")
     public String selectAllByCategory() {
         List<ApkRecommendList> apkRecommendLists = appRecommendService.getApkRecommendByCategory();
@@ -116,9 +117,8 @@ public class AppRecommendController {
      * @param id
      * @return
      */
-    @ApiIgnore
     @GetMapping("/query/{id}")
-    public String selectAppRecommendById(@ApiParam(name = "id", value = "路径上的id") @PathVariable(value = "id") Integer id) {
+    public String selectAppRecommendById(@ApiParam(name = "id", value = "推荐信息id") @PathVariable(value = "id") Integer id) {
         AppRecommend appRecommend = appRecommendService.getAppRecommendById(id);
         return JSON.toJSONString(appRecommend);
     }
@@ -132,7 +132,7 @@ public class AppRecommendController {
      * @param apkImg
      * @return
      */
-    @ApiIgnore
+    @ApiOperation(value = "apk推荐信息修改或者新增apk推荐信息")
     @PostMapping("/update1")
     public String update1(
             @ApiParam(name = "id", value = "推荐id") @RequestParam(value = "id") Integer id,
@@ -150,9 +150,9 @@ public class AppRecommendController {
      * @param id
      * @return
      */
-    @ApiIgnore
+    @ApiOperation(value = "删除指定坑位的apk推荐信息",notes = "其实是修改推荐信息，将原推荐信息的apk信息清空，保留推荐坑位")
     @PostMapping("update/{id}")
-    public String updateById(@ApiParam(name = "id", value = "推荐id") @PathVariable(value = "id") Integer id){
+    public String updateById(@ApiParam(name = "id", value = "推荐信息id") @PathVariable(value = "id") Integer id){
         AppRecommend appRecommend = appRecommendService.getAppRecommendById(id);
         appRecommend.setApkId(null);
         appRecommend.setImg("null");

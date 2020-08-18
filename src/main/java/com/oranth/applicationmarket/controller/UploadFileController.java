@@ -26,7 +26,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-@ApiIgnore
 @RestController()
 @RequestMapping("/upload/")
 @Api(value = "上传文件操作类",description = "上传文件操作类")

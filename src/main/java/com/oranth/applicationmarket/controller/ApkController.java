@@ -41,7 +41,6 @@ import java.util.*;
  * @author linsiteng
  * @since 2019-11-13
  */
-@ApiIgnore
 @Controller
 @RequestMapping("/core")
 @Api(value = "APK接口类",description = "APK接口类")
@@ -64,7 +63,6 @@ public class ApkController {
 		return JSON.toJSONString(apkList);
 	}
 
-	@ApiIgnore
 	@GetMapping("/query1/{id}")
 	public @ResponseBody ApkDet apkDet(@ApiParam(name = "id",value = "路径上的id")@PathVariable(value="id") Integer id){
 		Apk apk=apkService.queryApkById(id);
@@ -105,7 +103,6 @@ public class ApkController {
 		return mv;
 	}
 
-	@ApiIgnore
 	@PostMapping("/update1")
 	public @ResponseBody String update(
 			@ApiParam(name = "id",value = "id")@RequestParam(value="id") Integer id,
@@ -156,7 +153,6 @@ public class ApkController {
 		return ""+b;
 	}
 
-	@ApiIgnore
 	@RequestMapping(value = "/save",method = {RequestMethod.POST,RequestMethod.GET})
 	@ResponseBody
 	public String save(
@@ -202,7 +198,6 @@ public class ApkController {
 		return null;
 	}
 
-	@ApiIgnore
 	@ApiOperation("根据apk类型分页查询所有数据")
 	@GetMapping("/query/type")
 	@ResponseBody
@@ -242,7 +237,6 @@ public class ApkController {
 		return resultData +"";
 	}
 
-	@ApiIgnore
 	@ApiOperation("根据apk类型分页查询所有数据量")
 	@GetMapping("/ad/query/type/count")
 	@ResponseBody

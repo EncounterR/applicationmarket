@@ -28,7 +28,6 @@ import java.util.List;
  * @author linsiteng
  * @since 2019-11-14
  */
-@ApiIgnore
 @RestController
 @RequestMapping("/apk-version-old")
 @Api(value = "apk历史版本类",description = "apk历史版本类")

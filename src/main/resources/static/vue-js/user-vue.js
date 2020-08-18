@@ -12,7 +12,7 @@ var vm_apklist = new Vue({
 });
 var jsonData = "";
 var readyData = function () {
-    axios.post("web-user/query")
+    axios.get("web-user/query")
         .then(response => {
             jsonData = response.data;
             var dataHtml = "";
@@ -47,7 +47,7 @@ var createButtonclick = function () {
         console.log(id);
         var code_id = $(this).attr("code_id");
         if (id == 'del') {
-            axios.post("web-user/del/" + code_id)
+            axios.delete("web-user/" + code_id)
                 .then(response => {
                     var data = response.data;
                     if (data) {
@@ -169,14 +169,6 @@ var pagingpPlugin = function (page) {
         }
     });
 };
-/* var userAll = function(){
-	axios.get("http://192.168.199.153:10001/test/web-user/query)
-	.then(response => {
-		var data = response.data;
-		pagingpPlugin(1);
-	});
-}
-userAll(); */
 
 $("#add").click(function () {
     var data = new FormData();
@@ -192,6 +184,5 @@ $("#add").click(function () {
             } else {
                 alert("添加失败！！！");
             }
-            var dataHtml = "";
         })
 })
